@@ -121,7 +121,6 @@ export default class Search extends React.Component {
                                     />
                                 </div>
                             </div>
-
                             {hasResults && (
                                 <div className="d-flex justify-content-center no-gutters mb-4">
                                     <div>
@@ -134,7 +133,6 @@ export default class Search extends React.Component {
                                     </div>
                                 </div>
                             )}
-
                             <div className="row no-gutters">
                                 {results.map((val, i) => {
                                     return (
@@ -142,9 +140,7 @@ export default class Search extends React.Component {
                                     )
                                 })}
                             </div>
-
-
-                            {hasResults < maxResults &&
+                            {results.length < maxResults &&
                                 <div className="d-flex justify-content-center">
                                     <button className="mb-2 btn btn-dark" onClick={(e) => { this.handleOffset(e) }}>Load more</button>
                                 </div>
